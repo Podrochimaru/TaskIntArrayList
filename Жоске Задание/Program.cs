@@ -89,7 +89,7 @@ namespace Жоске_Задание
     {
         static void Main(string[] args)
         {
-            Console.WriteLine();
+
         }
     }
 }
