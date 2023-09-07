@@ -58,7 +58,31 @@ namespace Жоске_Задание
         //    }
         //    return true;
         //}
-
+        public int Find(int item)
+        {
+            int low = 0;
+            int high = storage.Count - 1;
+            int guess;
+            int mid;
+            while (low <= high)
+            {
+                mid = (low + high) / 2;
+                guess = this.storage[mid];
+                if (guess == item)
+                {
+                    return mid;
+                }
+                if (guess > item)
+                {
+                    high = mid - 1;
+                }
+                else
+                {
+                    low = mid + 1;
+                }
+            }
+            return -1;
+        }
     }
 
     internal class Program
